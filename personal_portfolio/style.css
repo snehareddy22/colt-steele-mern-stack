@@ -1,0 +1,24 @@
+*{
+    color:pink;
+    background-color: black;
+}
+h1{
+    text-align: center;
+    text-decoration: green wavy underline;
+    text-transform: uppercase;
+}
+h3{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+p{
+    line-height: 2;
+    font-family: fantasy;
+    letter-spacing: 0.5px;
+}
+h4{
+    font-style: italic;
+    text-align: center;
+}
