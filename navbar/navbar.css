@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+h1,p{
+    font-style: italic;
+    color:white;
+    
+    
+}
+a{
+    color:white;
+    text-decoration: none;
+
+}
+a:hover{
+    color:beige;
+}
+
+
+.links button{
+    background-color:rgb(87, 87, 181);
+    color:white;
+    width:100px;
+    height: 30px;
+    border-radius:8px;
+    border:none;   
+
+}
+button:hover{
+    background-color: #7575b2;  ;
+    cursor: pointer;
+    transition: 1s;
+}
+nav{
+    background-color: rgb(48, 48, 70); 
+    display:flex; 
+    align-items: center;
+    justify-content:space-between;
+    padding:0 30px;
+}
+
+.links{
+    display:flex;
+    gap:60px;
+    align-items:center;
+
+}
