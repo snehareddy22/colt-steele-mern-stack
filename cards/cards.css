@@ -1,0 +1,89 @@
+/* Universal Selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    align-items: center;
+}
+/* Product Card */
+.card{
+    width: 330px;
+    height: 500px;
+    padding: 20px;
+    margin: 20px;
+    background: rgba(255,255,255,0.9);
+    border: 2px solid #dddddd;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    position: relative; 
+    text-align: center; 
+}
+
+/* Offer Badge */
+.badge{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 10px;
+    background-color: #ff3b3b;
+    color: black;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.badge:hover{
+        background-color: #0056b3;
+}
+
+/* Product Image */
+.card img{
+    width: 100%;
+    height: 220px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Title */
+.card h2{
+    margin-top: 20px;
+    color: #333333;
+}
+
+/* Description */
+.card p{
+    margin-top: 10px;
+    color: #666666;
+    line-height:2;
+}
+
+/* Price */
+.price{
+    margin-top: 15px;
+    color: #28a745;
+    font-size: 24px;
+}
+
+/* Button */
+button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color:red;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+button:hover{
+    background-color: #0056b3;
+}

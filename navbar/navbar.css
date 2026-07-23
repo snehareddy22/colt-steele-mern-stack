@@ -19,13 +19,12 @@ a:hover{
 
 
 .links button{
-    background-color:orange
+    background-color:orange;
     color:white;
     width:100px;
     height: 30px;
     border-radius:8px;
     border:none;   
-
 }
 button:hover{
     background-color: rgb(221, 184, 115);  ;
