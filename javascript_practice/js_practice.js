@@ -152,59 +152,217 @@
 // delete user.address
 // console.log(user)
 
-for (let i=1;i<=20;i++){
-    console.log(i)
+// for (let i=1;i<=20;i++){
+//     console.log(i)
+// }
+// for (let i=20;i>=1;i--){
+//     console.log(i)
+// }
+// for (let i=2;i<=50;i+=2){
+//     console.log(i)
+// }
+// for (let i=1;i<=25;i+=2){
+//     console.log(i)
+// }
+
+// for (let i=1;i<=10;i++){
+//         console.log(`7 * ${i} = ${ 7*i}`)
+//     }
+
+
+// let total=0
+// for (let i=1;i<=100;i++){
+//     total+=i
+// }
+//     console.log(total);
+
+
+
+// for (let i=1;i<=50;i++){
+//     if (i===31){
+//         break;
+//     }
+//     console.log(i);
+// }
+
+
+// let pattern="";
+// for (let i=1;i<=5;i++){
+//     pattern+="*";
+//     console.log(pattern)
+//     }
+
+// #hard
+// for (let i=1;i<=50;i++){
+//     if (i%3==0 && i%5==0){
+//         console.log("FizzBuzz");
+//     }
+//     else if (i%3==0){
+//         console.log("Fizz");
+//     }
+//     else if (i%5==0){
+//         console.log("Buzz");
+//     }
+//     else{
+//         console.log(i);
+//     }
+// }
+
+
+// let colors = ["Red","Green","Blue"];
+// for (let i=0;i<colors.length;i++){
+//     console.log(colors[i])
+// }
+
+
+// for (let color of colors){
+//     console.log(color)
+// }
+
+// let nums = [10,20,30,40];
+// for (let i=nums.length-1;i>=0;i--){
+//     console.log(nums[i])
+// }
+
+// const students = ["Rahul","Sneha","Priya","Arjun"];
+// for (let i=0;i<students.length;i++){
+//     console.log(`${i}. ${students[i]}`)
+// }
+
+// const matrix = [[1,2],[3,4],[5,6]];
+// for (let i=0;i<matrix.length;i++){
+//     for (let j=0;j<matrix[i].length;j++){
+//         console.log(matrix[i][j])
+//     }
+// }
+
+// const person = {name:"Sakhi",age:22,city:"Hyderabad"};
+// for(let [key,value] of Object.entries(person)){
+//     console.log(`${key} : ${value}`);
+// }
+
+// const classroom = [
+// {
+//     name:"Rahul",
+//     marks:90
+// },
+// {
+//     name:"Sneha",
+//     marks:85
+// },
+// {
+//     name:"Priya",
+//     marks:95
+// }
+// ];
+// for (let student of classroom){
+//     console.log(`${student.name} scored ${student.marks}`)
+// }
+
+// const board = [
+// ["X","O","X"],
+// ["O","X","O"],
+// ["X","O","X"]
+// ];
+// for (let i=0;i<board.length;i++){
+//     for (let j=0;j<board[i].length;j++){
+//             console.log(board[i][j])
+//     }
+// }
+
+// function sayHi(){
+//     console.log("hi")
+// }
+// sayHi()
+// sayHi()
+// sayHi()
+
+// function square(num){
+//     return num**2
+// }
+// square()
+
+// function greet(name){
+//     return(`Hello ${name}`)
+// }
+// greet()
+
+// function multiply(a,b){
+//     return a*b
+// }
+// multiply()
+
+// function isEven(num){
+//     return num%2==0;
+//}
+
+// function getFullName(first,last){
+//     return (`${first} ${last}`)
+// }
+// getFullName()
+
+
+// function lastElement(arr){
+//     if(arr.length === 0){
+//         return null;
+//     }
+//     return arr[arr.length - 1];
+// }
+
+// function capitalize(word){
+//     return (word[0].toUpperCase()+word.slice(1))
+// }
+// capitalize()
+
+
+// function sumArray(numbers){
+//     let total = 0;
+//     for(let num of numbers){
+//         total += num;
+//     }
+//     return total;
+// }
+
+// function isShortsWeather(temp){
+//     if (temp>=75){
+//         return true
+//     }
+//     return false
+// }
+// isShortsWeather()
+
+
+
+//     function add(a,b){
+//         return (a+b)
+//     }
+//     function subtract(a,b){
+//         return (a-b)
+//     }
+//     function multiply(a,b){
+//         return (a*b)
+//     }
+//     function divide(a,b){
+//         return (a/b)
+//     }
+//     function square(a){
+//         return (a*a)
+//     }
+//     function cube(a){
+//         return (a**3)
+//     }
+
+function showMessage(){
+    let msg = "Hello";
+    console.log(msg);
 }
-for (let i=20;i>=1;i--){
-    console.log(i)
-}
-for (let i=2;i<=50;i+=2){
-    console.log(i)
-}
-for (let i=1;i<=25;i+=2){
-    console.log(i)
+console.log(msg)  //error
+
+if(true){
+    const city = "Delhi";
+    console.log(city)
 }
 
-for (let i=1;i<=10;i++){
-        console.log(`7 * ${i} = ${ 7*i}`)
-    }
-
-
-let total=0
-for (let i=1;i<=100;i++){
-    total+=i
-}
-    console.log(total);
-
-
-
-for (let i=1;i<=50;i++){
-    if (i===31){
-        break;
-    }
-    console.log(i);
-}
-
-
-let pattern="";
-for (let i=1;i<=5;i++){
-    pattern+="*";
-    console.log(pattern)
-    }
-
-#hard
-for (let i=1;i<=50;i++){
-    if (i%3==0 && i%5==0){
-        console.log("FizzBuzz");
-    }
-    else if (i%3==0){
-        console.log("Fizz");
-    }
-    else if (i%5==0){
-        console.log("Buzz");
-    }
-    else{
-        console.log(i);
-    }
-   
+const cube = function(num){
+    return num**3
 }
