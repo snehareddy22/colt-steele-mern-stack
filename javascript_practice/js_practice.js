@@ -354,20 +354,3 @@
 
 
 
-
-
-
-function showMessage(){
-    let msg = "Hello";
-    console.log(msg);
-}
-console.log(msg)  //error
-
-if(true){
-    const city = "Delhi";
-    console.log(city)
-}
-
-const cube = function(num){
-    return num**3
-}
