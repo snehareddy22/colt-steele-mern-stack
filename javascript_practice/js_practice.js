@@ -6,6 +6,7 @@
 //     console.log("too young");
 // }
 
+
 // let number=parseInt(prompt("enter a number"));
 // if (number%2==0){
 //     console.log("even");
@@ -352,5 +353,46 @@
 //         return (a**3)
 //     }
 
+//section 21 functions
+let animal = "Tiger";
+function test() {
+    let animal = "Lion";
+    console.log(animal);   //lion
+}
+test();
+console.log(animal); //tiger
 
+function secret() {
+    let password = "1234";
+    return password;
+}
+    const password=secret();
+    console.log(password);
+
+
+const square=function(n){
+    return n * n;
+};
+console.log(square(5));  // 25
+console.log(square(10)); // 100
+
+const isAdult=function(a){
+    return a>=18;
+};
+console.log(isAdult(20)); // true
+console.log(isAdult(15)); // false
+
+
+
+//huh
+function greet({ first, last }) {
+    return `${first} ${last}`;
+}
+const user = {
+    name: "Sakhi",
+    age: 22,
+    city: "Hyderabad"
+};
+
+const { name, ...otherInfo } = user;
 
