@@ -510,5 +510,173 @@ try{
 }
 
 //section 22-callbacks and array methods
+//Instead	of	manually	writing	loops	every	time,	array	methods	let	you	describe	what	you	want	to	do	with	each	element
+//callback functions-a callback is a function which is passes into anather function to be called later
 
+function greet(){
+    console.log(hi);
+}
+function callTwice(){
+    func();
+    func();
+}
+callTwice(greet); //passes the function
+
+//FOR EACH
+//Runs	a	callback	once	for	every	element	in	an	array.
+const nums=[1,2,3,4,5,6,7];
+nums.forEach(function(n){
+    console.log(n);
+});// 1 2 3 4 5 6 7
+
+//arrow function version
+nums.forEach(num=>{
+    console.log(num);
+})
+
+//with objects
+const	movies	=	[
+    {	title:	"Amadeus",	score:	99	},
+    {	title:	"Stand	By	Me",	score:	85	},
+    {	title:	"Parasite",	score:	95	}
+];
+movies.forEach(movie=>{
+    console.log(`${movie.title}-${movie.score}`);
+});
+
+//MAP
+//create a new array by running a callback on evry element
+const nums=[1,2,3,4];
+const doubles=nums.map(num=>{
+    return num*2;   //[2,4,6,8]
+});
+
+//with strings
+const text=	["rofl",	"lol",	"omg",	"ttyl"];
+const caps=text.map(texts=>texts.toUpperCase());
+//	["ROFL",	"LOL",	"OMG",	"TTYL"]
+
+//with objects
+const	movies	=	[
+    {	title:	"Amadeus",	score:	99	},
+    {	title:	"Stand	By	Me",	score:	85	},
+    {	title:	"Parasite",	score:	95	}
+];
+const newMovies=movies.map(movie=>{
+    return `${movie.title}-${movie.score/10}`;
+})
+//	["Amadeus-9.9","Stand By Me	-8.5","Parasite	-9.5"]
+
+//ARROW FUNCITONS
+const square=function(x){  //normal function
+    return x*x;
+}
+
+const square2=x=>{  //one parameter
+    return x*x;
+}
+
+const multi=(a,b)=>{  //two parameter
+    return a*b;
+}
+
+//IMPLICIT RETURN  -can reduce lines
+//	Instead	of:
+const isEven	=	(num)	=>	{
+    return num%2===0;
+};
+//	Write:
+const isEven2=num=>num%2===	0;
+//	eg 2
+const	square4	=	num	=>	num	*	num
+
+//FILTER-Creates a new array containing only the elements that	pass a test.
+//a callback must return true or false
+const numbers=[1,2,3,4,5];
+const evennum=numbers.filter(num=>{
+    return num%2==0;
+});   //[2,4]
+//movie eg
+const goodMovies=movies.filter(movie=>movie.score>80);
+const badMovies	=movies.filter(movie=>movie.score<70);
+
+
+//SOME-Does at	least ONE element pass the test? Returns a Boolean.
+const exams=[80,90,85,75,77,98];
+exams.some(score=> score>=80);  //true
+
+const words=["dog",	"jello","log","cupcake"];
+words.some(word=>word.length>4);  //true
+
+//EVERY-do all the lement pass the test
+const exam=[80,90,85,75,77,98];
+exams.every(word=>word.length>=85); //false
+
+//FIND-find and returns the first element that pass the test
+const numbers=[1,2,3,4,5];
+const results=numbers.find(number=>numver>=0); //1
+
+//REDUCE-Runs a reducer function over the array	and	produces one final value.
+const prices=[9,22,99,40,100,4,35];
+//using loops
+let total=0;
+for (let price of prices){
+    total+=price;
+}
+//with reduce
+const total2=prices.reduce((total,price)=>{
+    return total+price;
+},0);//0 is initial value
+//accumulator:total-the value being built up
+//current value:price-the current array elment
+ //reduce for min
+ const minPrice=prices.reduce((min,price)=>{
+    if (price<min){
+        return price
+    }
+    return min;
+ });
+
+//movie example
+const	movies2	=	[
+    {	title:	"A",	score:	80	},
+    {	title:	"B",	score:	95	},
+    {	title:	"C",	score:	88	}
+];
+const bestMovie=movies2.reduce((bestMovie,current)=>{
+    if (current.score>bestMovie.score){
+        return current;
+    }
+    return bestMovie;
+});
+
+//providing an initial value
+const evens=[2,4,6,8];
+const results=evens.reduce((sum,num)=>sum+num,100);//120
+
+//SETTIMEOUT()-runs a funciton after a specific delay
+setTimeout(()=>{
+    console.log("hello");
+},3000);  //runs after 3 seconds
+
+//SETINTERVEL-repeatedly runs a function at a specified intervel
+const id=setInterval(()=>{
+    console.log(math,random());
+},2000); //runs approx after evry 2 secs
+
+// Callback:	a	function	passed	to	another	function.
+// forEach():	runs	callback	once	for	every	element.
+// map():	creates	a	new	array	by	transforming	every	element.
+// filter():	creates	a	new	array	containing	elements	that	pass	a	test.
+// find():	returns	the	first	element	that	passes	a	test.
+// some():	returns	true	if	at	least	one	element	passes.
+// every():	returns	true	only	if	all	elements	pass.
+// reduce():	combines	array	elements	into	one	final	value.
+// Arrow	Function:	shorter	function	syntax.
+// Implicit	Return:	arrow	function	automatically	returns	an	expression.
+// setTimeout():	run	once	after	a	delay.
+// setInterval():	run	repeatedly	at	an	interval.
+// clearInterval():	stop	an	interval.
+
+//newer js features
 
