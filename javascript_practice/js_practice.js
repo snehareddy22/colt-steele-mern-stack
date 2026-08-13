@@ -384,15 +384,131 @@ console.log(isAdult(15)); // false
 
 
 
-//huh
-function greet({ first, last }) {
-    return `${first} ${last}`;
+//section 21
+//scope =The location where you declare a variable determines where you can use it.
+function help(){
+    let msg ="hi i need help!";  //variable declared inside function
+    console.log(msg);
 }
-const user = {
-    name: "Sakhi",
-    age: 22,
-    city: "Hyderabad"
-};
+help();  //works
+console.log(msg); //msg is not defined 
 
-const { name, ...otherInfo } = user;
+let x=10;   //variable declared outide the function its a global variable
+function test(){
+    console.log(x);  //can acces it
+}
+test();
+
+
+//scope with let ,const,var(var dont respect the block scope)
+if (true){
+    let age=22;
+}
+console.log(age); // cant acces it
+
+//block scope  =code inside {} like if,for ,while cannot access outside
+let raduis=8;
+if (radius>0){
+    const PI=3.14;
+    let circ=2*PI*radius;
+}
+console.log(radius) //8
+console.log(PI)   //cant access
+console.log(circ)  //cant access
+
+
+// function scope vs block scope
+function test(){
+    let x=10;
+}
+//belongs to the function
+if(true){
+    let x=20;
+}
+//belongs to the if block
+
+
+//lexical scope
+// the inner function can acces the variabels in outer function but not viceversa
+function outer(){
+    let hero="superman";
+    function inner(){
+        console.log(hero);
+    }
+    inner();  
+}
+outer();//superman
+
+function outer(){
+    function inner(){
+        let secret="nothing";
+    }
+    console.log(secret);  //cant access becouse outer function cannot acces variables in inner function
+}
+
+//function expression=we can store the funcitions inside a varible
+function squae(x){
+    return x*x;
+}
+//using function expression
+const square=function(x){
+    return x*x;
+};
+square(10);
+
+//higher order functions
+//the functions can accept other functions as arguments and can return a funciton
+function callTwice(){
+    func();
+    func();
+}
+function rollDie(){
+    const roll=Math.floor(Math,random()*6)+1;
+    console.log(roll);
+}
+callTwice(rollDie)  //we call the roll die in callTwice 
+//not callTwice(rollDie())
+
+
+//methods
+//a function stored as a property is called as a method
+const math = {
+    multiply(x, y) {
+        return x * y;
+    },
+    divide(x, y) {
+        return x / y;
+    }
+};
+math.multiply(5, 3);   // 15
+math.divide(10, 2);    // 5
+
+//THIS keyword
+//When a function is called as an object method, this generally refers to the object that called the method
+const person = {
+    first: "Robert",
+    last: "Herjavec",
+    fullName(){
+        return `${this.first}${this.last}`
+    }
+};
+person.fullName();  //Robert Herjavec
+
+//try and catch=The	program	can	handle	the	error	instead	of	simply	crashing
+try{
+    hello.toUpperCase();
+}catch{
+    console.log("Error!!!");
+}
+
+//try/catch with error object
+try{
+    hello.toUpperCase();
+}catch(err){
+    console.log(err);
+    console.log(err.message)
+}
+
+//section 22-callbacks and array methods
+
 
