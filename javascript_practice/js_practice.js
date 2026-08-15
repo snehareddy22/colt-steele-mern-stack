@@ -407,7 +407,7 @@ if (true){
 console.log(age); // cant acces it
 
 //block scope  =code inside {} like if,for ,while cannot access outside
-let raduis=8;
+let radius=8;
 if (radius>0){
     const PI=3.14;
     let circ=2*PI*radius;
@@ -458,12 +458,12 @@ square(10);
 
 //higher order functions
 //the functions can accept other functions as arguments and can return a funciton
-function callTwice(){
+function callTwice(func){
     func();
     func();
 }
 function rollDie(){
-    const roll=Math.floor(Math,random()*6)+1;
+    const roll=Math.floor(Math.random()*6)+1;
     console.log(roll);
 }
 callTwice(rollDie)  //we call the roll die in callTwice 
@@ -489,7 +489,7 @@ const person = {
     first: "Robert",
     last: "Herjavec",
     fullName(){
-        return `${this.first}${this.last}`
+        return `${this.first} ${this.last}`;
     }
 };
 person.fullName();  //Robert Herjavec
@@ -514,9 +514,9 @@ try{
 //callback functions-a callback is a function which is passes into anather function to be called later
 
 function greet(){
-    console.log(hi);
+    console.log("hi");
 }
-function callTwice(){
+function callTwice(func){
     func();
     func();
 }
@@ -609,12 +609,12 @@ const words=["dog",	"jello","log","cupcake"];
 words.some(word=>word.length>4);  //true
 
 //EVERY-do all the lement pass the test
-const exam=[80,90,85,75,77,98];
-exams.every(word=>word.length>=85); //false
+const exams = [80,90,85,75,77,98];
+exams.every(score => score >= 85);
 
 //FIND-find and returns the first element that pass the test
 const numbers=[1,2,3,4,5];
-const results=numbers.find(number=>numver>=0); //1
+const results=numbers.find(number=>number>=0); //1
 
 //REDUCE-Runs a reducer function over the array	and	produces one final value.
 const prices=[9,22,99,40,100,4,35];
@@ -661,8 +661,9 @@ setTimeout(()=>{
 
 //SETINTERVEL-repeatedly runs a function at a specified intervel
 const id=setInterval(()=>{
-    console.log(math,random());
+    console.log(math.random());
 },2000); //runs approx after evry 2 secs
+clearInterval(id); //remember to stop the interval when you're finished
 
 // Callback:	a	function	passed	to	another	function.
 // forEach():	runs	callback	once	for	every	element.
@@ -679,4 +680,49 @@ const id=setInterval(()=>{
 // clearInterval():	stop	an	interval.
 
 //newer js features
+//default parameters-gives a parameter a default value when no argument is provided
+function rollDie(numSide=6){
+    return Math.floor(Math.random()*numSide)+1;
+}
+rollDie(20); //uses 20 sides
+rollDie()//uses 6 sides
+
+//eg 2
+function greet(name="guest"){
+    return `hello ${name}`;
+}
+greet("sneha");  //hello sneha
+greet();         //hello guest
+
+
+//SPREAD SYNTAX ... -take the contents of something and spread them out
+//spread in concole log
+console.log(...nums);	//	1	2	3(each as separate argument)
+console.log(nums);		//	[1,	2,	3](as array)
+
+//spread with stribgs
+console.log(..."hello"); //h e l l o
+
+//spread with array literals
+const cats	=["Blue","Scout","Rocket"];
+const dogs	=["Rusty","Wyatt"];
+const allPets	=[...cats,	...dogs];
+//	["Blue","Scout","Rocket","Rusty","Wyatt"]
+//we can add values while spreading
+const nums2=[2,3,4];
+const newNums=[1,...nums2,5]//[1,2,3,4,5]
+//copy an array
+const original=[1,2,3];
+const copy=[...original]; //new array same elments
+//spread with objects
+const feline={legs:	4,family:"Felidae"};
+const canine={isFurry:true,	family:	"Caninae"};
+const catDog={...feline,...canine};
+//	{legs:4,family:	"Caninae",	isFurry:true}
+//add or overwrite the properties with object spread
+const user={name:"sneha",age:22};
+const updateduser={...user,age:23};
+//{name:"sneha",age:23}
+
+
 
