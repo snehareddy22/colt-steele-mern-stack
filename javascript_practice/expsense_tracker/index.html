@@ -1,0 +1,201 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <h1>EXPENSE TARCKER</h1>
+    <form id="myform">
+        <input type="text"placeholder="Enter Title" id="name">
+        <input type="number"placeholder="Enter Amount" id="amount">
+        <select  id="dropdown">
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Rent">Rent</option>
+            <option value="EMI">EMI</option>
+            <option value="Transport">Transport</option>
+            <option value="Fun">Fun</option>
+        </select>
+        <button>Add Expense</button>
+    </form>
+    <ul id="output"></ul>
+    <button id="reset">Reset</button>
+    <script src="app.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #eef2ff, #f8fafc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #1e293b;
+            letter-spacing: 1px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #dbe1ea;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            background: #f8fafc;
+            transition: 0.2s;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #6366f1;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        form button {
+            grid-column: 1 / -1;
+            border: none;
+            padding: 13px;
+            border-radius: 10px;
+            background: #6366f1;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        form button:hover {
+            background: #4f46e5;
+            transform: translateY(-1px);
+        }
+
+        #output {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        #output li {
+            padding: 16px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #334155;
+        }
+
+        #reset {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #ef4444;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        #reset:hover {
+            background: #dc2626;
+        }
+
+        @media (max-width: 550px) {
+            .container {
+                padding: 22px;
+            }
+
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            form button {
+                grid-column: auto;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>EXPENSE TARCKER</h1>
+
+        <form id="myform">
+            <input type="text" placeholder="Enter Title" id="name">
+
+            <input type="number" placeholder="Enter Amount" id="amount">
+
+            <select id="dropdown">
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Rent">Rent</option>
+                <option value="EMI">EMI</option>
+                <option value="Transport">Transport</option>
+                <option value="Fun">Fun</option>
+            </select>
+
+            <button>Add Expense</button>
+        </form>
+
+        <ul id="output"></ul>
+
+        <button id="reset">Reset</button>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
